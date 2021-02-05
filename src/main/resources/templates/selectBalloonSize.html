@@ -1,0 +1,41 @@
+<th:block xmlns:th="http://www.thymeleaf.org">
+    <section class="jumbotron text-center">
+        <div class="container">
+            <h1 class="jumbotron-heading">BLAGOJ'S BALLOON SHOP</h1>
+            <h3 class="jumbotron-heading">Balloon Order page - Select Balloon Size</h3>
+        </div>
+    </section>
+
+    <div class="container">
+        <h4 class="jumbotron-heading">Choose a size for your balloon.</h4><br/><br/>
+        <div class="row">
+            <form th:action="@{/BalloonOrder.do}" th:method="POST">
+                <input type="radio" name="size" value="Small"> Small <br/>
+                <input type="radio" name="size" value="Medium"> Medium <br/>
+                <input type="radio" name="size" value="Big"> Big <br/>
+                <input type="radio" name="size" value="Extra Big"> Extra Big <br/>
+                <br/>
+                <button class="btn btn-success btn-sm ml-3">
+                    <i class="fa fa-submit"></i>Submit
+                </button>
+            </form>
+        </div>
+    </div>
+    <aside>
+        <div class="container">
+            <div class="row">
+                <div class="col md-1">
+                    <table class="table table-striped">
+                        <tr>
+                            <th colspan="2">Your Order Status</th>
+                        </tr>
+                        <tr>
+                            <td>Balloon Type</td>
+                            <td><th:block th:text="${color}"></th:block></td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </aside>
+</th:block>

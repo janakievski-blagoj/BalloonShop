@@ -1,0 +1,50 @@
+<th:block xmlns:th="http://www.thymeleaf.org">
+    <section class="jumbotron text-center">
+        <div class="container">
+            <h1 class="jumbotron-heading">BLAGOJ'S BALLOON SHOP</h1>
+            <h3 class="jumbotron-heading">Balloon Order page - Order confirmation</h3>
+        </div>
+    </section>
+    <div class="container mb-4">
+        <div class="row">
+            <table class="table table-striped">
+                <thead>
+                <th colspan="2">Your Order Status</th>
+                </thead>
+                <tbody>
+                <tr>
+                    <td><b>Client Name</b></td>
+                    <td><th:block th:text="${clientName}"></th:block></td>
+                </tr>
+                <tr>
+                    <td><b>Client IP Address</b></td>
+                    <td><th:block th:text="${clientIpAddress}"></th:block></td>
+                </tr>
+                <tr>
+                    <td><b>Client Browser</b></td>
+                    <td><th:block th:text="${clientBrowser}"></th:block></td>
+                </tr>
+                <tr>
+                    <td><b>Balloon Color</b></td>
+                    <td><th:block th:text="${clientColor}"></th:block></td>
+                </tr>
+                <tr>
+                    <td><b>Balloon Size</b></td>
+                    <td><th:block th:text="${clientSize}"></th:block></td>
+                </tr>
+                </tbody>
+            </table>
+        </div>
+        <div>
+            <div class="form-group">
+                <a class="btn btn-primary form-control" href="/logout">Log out</a>
+            </div>
+            <div class="form-group">
+                <a href="/order/orders" class="btn btn-primary form-control">See all orders!</a>
+            </div>
+            <div class="form-group">
+                <a href="/balloons" class="btn btn-primary form-control">Go and make new orders!!</a>
+            </div>
+        </div>
+    </div>
+</th:block>
